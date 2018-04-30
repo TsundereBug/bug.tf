@@ -1,0 +1,13 @@
+@import java.awt.Color
+@(title: String, description: String, image: Option[String] = None, themecolor: Option[Color] = None)
+
+<meta property="og:title" content="@title">
+<meta property="og:description" content="@description">
+@if(image.isDefined) {
+    <meta property="og:image" content="@image">
+}
+@if(themecolor.isDefined) {
+    <meta name="theme-color" content="#@themecolor.map((c: Color) => {
+        (c.getRed :: c.getGreen :: c.getBlue :: Nil).map(_.toHexString.reverse.padTo(2, "0").reverse.mkString).mkString
+    })">
+}

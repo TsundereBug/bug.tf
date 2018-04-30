@@ -1,0 +1,17 @@
+<!-- https://www.playframework.com/documentation/latest/SettingsLogger -->
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <target>System.out</target>
+  </appender>
+
+  <appender name="STDERR" class="ch.qos.logback.core.ConsoleAppender">
+    <target>System.err</target>
+  </appender>
+
+  <logger name="gaeLog" level="DEBUG">
+    <appender-ref ref="STDOUT" />
+    <appender-ref ref="STDERR" />
+  </logger>
+
+</configuration>

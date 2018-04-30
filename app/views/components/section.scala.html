@@ -1,0 +1,7 @@
+@(name: String)(content: Html)
+
+<section>
+    <h1 id="@name.toLowerCase.replaceAll(" ", "-")">@name</h1>
+    <hr>
+    @content
+</section>
