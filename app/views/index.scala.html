@@ -1,35 +1,11 @@
 @import java.awt.Color
 
+@import services.IndexSections
 @()
 
-@main("bug.tf", new Color(0xf28730)) {
-
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @components.header("bug")
-
-    <div id="content" class="wrapper">
-        <article>
-            @components.section("About Me") {
-                I'm Anthony Cerruti. Other names I go by online include:
-                <ul>
-                    <li>bug</li>
-                    <li>tsun_bug</li>
-                    <li>TsundereBug</li>
-                </ul>
-            }
-            @components.section("My Development") {
-                TODO
-            }
-        </article>
-        <aside>
-            <ul>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#my-development">My Development</a></li>
-            </ul>
-        </aside>
-    </div>
-
-}
+@template(
+    "bug.tf",
+    new Color(0xf28730),
+    "bug",
+    IndexSections.sections
+)

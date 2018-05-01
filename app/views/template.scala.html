@@ -1,0 +1,20 @@
+@import java.awt.Color
+@import services.Section
+
+@(name: String, color: Color, header: String, sections: Traversable[Section])
+
+@main(name, color) {
+
+    @components.header(header)
+
+    <div class="wrapper" id="content" >
+        <article>
+            @sections.map(_.toSection)
+        </article>
+
+        <aside>
+            <ul>@sections.map(_.toSectionEntry)</ul>
+        </aside>
+    </div>
+
+}

@@ -7,7 +7,5 @@
     <meta property="og:image" content="@image">
 }
 @if(themecolor.isDefined) {
-    <meta name="theme-color" content="#@themecolor.map((c: Color) => {
-        (c.getRed :: c.getGreen :: c.getBlue :: Nil).map(_.toHexString.reverse.padTo(2, "0").reverse.mkString).mkString
-    })">
+    <meta name="theme-color" content="#@themecolor.map(services.ColorToString(_))">
 }
