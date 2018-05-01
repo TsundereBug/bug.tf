@@ -1,9 +1,9 @@
 @import java.awt.Color
-@(name: String, color: Color, icon: String)(content: Html)
+@(link: String, name: String, color: Color, icon: String)(content: Html)
 
 <div class="devcard" style="background: @services.ColorToString(color);">
     <div class="dc-header" style="background: @services.ColorToString(color.darker());">
-        <img src="@icon" width="16" height="16" /> <b>@name</b>
+        <img src="@icon" width="16" height="16" /> <a href="@link"><b>@name</b></a>
     </div>
     <div class="dc-content">
         @content

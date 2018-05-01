@@ -18,7 +18,7 @@ header > h1 {
 }
 
 #header-bug {
-    background: linear-gradient(135deg, #ff775b, #f28730);
+    background: linear-gradient(135deg, #e74c3c, #e67e22);
 }
 
 .wrapper {
@@ -33,6 +33,7 @@ header > h1 {
 article {
     width: 650px;
     float: left;
+    text-align: justify;
 }
 
 aside {
@@ -74,8 +75,4 @@ section h1 {
     position: relative;
     left: -8px;
     text-transform: uppercase;
-}
-
-.devcard > .dc-content {
-    text-align: justify;
 }
