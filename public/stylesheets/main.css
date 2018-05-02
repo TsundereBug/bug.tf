@@ -12,7 +12,7 @@ header {
 
 header > h1 {
     width: 100%;
-    font-size: 5em;
+    font-size: 5rem;
     text-align: center;
     background: transparent !important;
 }
@@ -37,13 +37,13 @@ article {
 }
 
 aside {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     width: 270px;
     float: right;
 }
 
 section {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin: 24px;
 }
 
@@ -57,10 +57,11 @@ section h1 {
 }
 
 .devcard {
-    width: calc(100% - 16px);
-    border-radius: 16px;
-    padding: 0 8px 8px;
-    margin: 8px 0;
+    font-size: 0.8rem;
+    width: calc(100% - 1.2rem);
+    border-radius: 1.2rem;
+    padding: 0 0.6rem 0.6rem;
+    margin: 0.6rem 0;
     overflow: hidden;
     color: #ffffff;
 }
@@ -70,9 +71,23 @@ section h1 {
 }
 
 .devcard > .dc-header {
-    width: calc(100% + 16px);
-    padding: 0 16px;
+    width: calc(100% - 1.2rem);
+    height: 1.2rem;
+    font-size: 1rem;
+    padding: 0 1.2rem;
     position: relative;
-    left: -8px;
+    left: -0.6rem;
     text-transform: uppercase;
+}
+
+.devcard > .dc-header > img {
+    position: relative;
+    top: 0.125rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.devcard > .dc-header > a {
+    position: relative;
+    top: -0.06125rem;
 }
